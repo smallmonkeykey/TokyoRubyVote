@@ -46,10 +46,6 @@ class Vote < ApplicationRecord
       .order('categories.category_name ASC')
   end
 
-  def self.closed?
-    Time.current >= CLOSING_TIME
-  end
-
   private
 
   def cannot_vote_for_same_entry

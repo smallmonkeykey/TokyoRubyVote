@@ -3,9 +3,15 @@
 FactoryBot.define do
   factory :user do
     provider { 'github' }
-    uid { '1234567' }
-    name { 'smallmonkeykey' }
-    admin { true }
+    sequence(:uid) { |n| "user_uid_#{n}" }
+    name { 'smallmonkey' }
+    admin { false }
     session_digest { nil }
+
+    trait :admin do
+      admin { true }
+      name { 'admin_user' }
+      uid  { 'admin_uid' }
+    end
   end
 end
