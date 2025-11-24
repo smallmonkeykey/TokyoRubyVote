@@ -2,7 +2,15 @@
 
 FactoryBot.define do
   factory :event do
-    title { 'MyString' }
-    status { 1 }
+    title { 'TokyuRuby会議' }
+    status { :open }
+
+    trait :event1 do
+      title { 'TokyuRuby会議15' }
+    end
+
+    trait :event2 do
+      title { 'TokyuRuby会議16' }
+    end
   end
 end
