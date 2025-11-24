@@ -50,3 +50,8 @@ ERBのlint
 ```
 bundle exec erblint .
 ```
+
+# テスト
+```
+bundle exec rspec
+```
