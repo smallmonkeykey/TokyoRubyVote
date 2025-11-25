@@ -13,8 +13,7 @@
       <%= f.select :status,
         Event.statuses.keys.map { |status| [t("enums.event.status.#{status}"), status] },
         {},
-        class: "border border-gray-300 rounded-md p-2 w-full sm:w-60"
-      %>
+        class: "border border-gray-300 rounded-md p-2 w-full sm:w-60" %>
     </div>
     <div class="mt-4">
       <%= f.submit "更新する",
