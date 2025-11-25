@@ -23,7 +23,7 @@ namespace :entry do
         { name: 'Lni_T / ルニ', title: 'ruby.wasmはどこでも動くのか？ ― みんな！オラに検証機を分けてくれ！' },
         { name: 'lef237', title: '人生で初めてRubyのgemをリリースした話' },
         { name: 'sugiwe', title: 'ViewファーストなRailsアプリ開発のたのしさ' },
-        { name: 'dak2', title: 'MCP Security Best Practices と modelcontextprotocol/ruby-sdk の現在地' },
+        { name: 'dak2', title: ' MCP Security Best Practices に見る MCP のセキュリティリスクと`modelcontextprotocol/ruby-sdk` の authorization の現在地' },
         { name: 'yancya', title: 'RubyKaigi 2026 の宿は、やんちゃハウスで！' },
         { name: '仁藤慎平', title: '小5息子に「Rubyではじめる電子工作~ラジコンを作ろう~」でRuby沼に沈めてみた' },
         { name: '鍋谷 武典', title: '私がわかっていなかった ruby の挙動の紹介' },
