@@ -25,7 +25,7 @@ namespace :entry do
         { name: 'sugiwe', title: 'ViewファーストなRailsアプリ開発のたのしさ' },
         { name: 'dak2', title: ' MCP Security Best Practices に見る MCP のセキュリティリスクと`modelcontextprotocol/ruby-sdk` の authorization の現在地' },
         { name: 'yancya', title: 'RubyKaigi 2026 の宿は、やんちゃハウスで！' },
-        { name: '仁藤慎平', title: '小5息子に「Rubyではじめる電子工作~ラジコンを作ろう~」でRuby沼に沈めてみた' },
+        { name: '仁藤慎平', title: '小5息子に素数スピードでボコボコにされたので、Rubyで素因数分解速解ゲームで練習してリベンジしてみた' },
         { name: '鍋谷 武典', title: '私がわかっていなかった ruby の挙動の紹介' },
         { name: '5hun', title: 'ぼっちが秘める可能性 〜孤高のRubyistが語る交流会サバイバル術〜' },
         { name: 'fd0', title: 'Ruby on Cygwin 2025年11月号' },
