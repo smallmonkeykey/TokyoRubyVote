@@ -3,10 +3,10 @@
 # rubocop:disable Metrics/BlockLength
 
 namespace :entry do
-  desc 'Create lt entries for event id 2'
+  desc 'Create lt entries for TokyuRubykaigi16'
   task create_lt: :environment do
     ActiveRecord::Base.transaction do
-      event = Event.find_by(id: 2)
+      event = Event.find_by!(title: 'TokyuRuby会議16')
       category = Category.find_by!(category_name: 'lt')
 
       lightning_talks = [
@@ -39,6 +39,7 @@ namespace :entry do
       ]
 
       lightning_talks.each do |lightning_talk|
+        # 現状はLT登壇者をUserとして作成しているが、将来的にはLT専用テーブルに切り出す予定のため一時的な運用
         user = User.create!(name: lightning_talk[:name])
 
         Entry.create!(
