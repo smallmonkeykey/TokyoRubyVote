@@ -5,7 +5,9 @@
     <%= link_to '酒王', event_rankings_path(@event, category: 'drink'), class: "text-white px-4 py-2 rounded-md #{params[:category] == 'drink' ? 'bg-green-500' : 'bg-slate-300'}" %>
     <%= link_to 'LT王', event_rankings_path(@event, category: 'lt'), class: "text-white px-4 py-2 rounded-md #{params[:category] == 'lt' ? 'bg-orange-500' : 'bg-slate-300'}" %>
   </div>
-  <h2 class="text-2xl font-semibold mb-4 text-gray-800">単品王</h2>
+  <h2 class="text-2xl font-semibold mb-4 text-gray-800">
+    <%= @category == 'lt' ? 'LT王' : '単品王' %>
+  </h2>
   <% @rankings.each_with_index do |ranking, index| %>
     <div class="mb-4 p-4 border border-gray-300 rounded-md">
       <p class="text-xl font-bold"><%= index + 1 %>位: <%= ranking.name %></p>

@@ -4,7 +4,7 @@
   <% if @entry.image.attached? %>
     <%= image_tag @entry.image.variant(resize: "400x400"), class: "rounded-md" %>
   <% end %>
-    <p class="text-2xl mt-2 font-bold">「<%= @entry.title %>」</p>
+    <p class="text-2xl mt-2 font-bold" style="word-break: break-all; overflow-wrap: break-word;">「<%= @entry.title %>」</p>
     <p class="text-2xl mt-2"><%= @name %></p>
     <p class="text-1xl mt-4 break-words"><%= @entry.description %></p>
   </div>
