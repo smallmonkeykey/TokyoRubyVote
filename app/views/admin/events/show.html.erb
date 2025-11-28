@@ -24,7 +24,11 @@
 
 <div class="max-w-4xl mx-auto px-4">
   <% @rankings.each do |category, rankings| %>
-    <h2 class="text-xl font-semibold mt-10 mb-4"><%= t("categories.#{category}") %> 単品王</h2>
+    <% if category == 'lt' %>
+      <h2 class="text-xl font-semibold mt-10 mb-4"><%= t("categories.#{category}") %></h2>
+    <% else %>
+      <h2 class="text-xl font-semibold mt-10 mb-4"><%= t("categories.#{category}") %> 単品王</h2>
+    <% end %>
     <div class="overflow-x-auto rounded-lg shadow-sm">
       <table class="min-w-full bg-white border border-gray-300">
         <thead class="bg-gray-100">
