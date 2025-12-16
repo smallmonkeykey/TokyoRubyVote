@@ -18,23 +18,28 @@
             <%= image_tag 'icon.png', alt: 'Tokyu.rb', class: 'h-12' %>
           <% end %>
         </div>
+        <div class="flex items-center gap-3">
+          <% if logged_in? && current_user.admin? %>
+            <%= link_to '管理者ページ', admin_events_path,
+              class: "mr-4 text-white font-semibold hover:underline" %>
+          <% end %>
           <% if logged_in? %>
-            <%= button_to 'ログアウト', logout_path, method: :delete, class: "bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 hover:text-white" %>
+            <%= button_to 'ログアウト', logout_path, method: :delete,
+              class: "bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 hover:text-white" %>
           <% end %>
         </div>
       </nav>
     </header>
-      <div class="container mx-auto mt-4 text-center px-4 sm:px-6 lg:px-8">
-        <% if notice %>
-          <p class="bg-green-100 text-green-700 p-4 rounded-md max-w-full sm:max-w-lg md:max-w-md mx-auto"><%= notice %></p>
-        <% end %>
-
-        <% if alert %>
-          <p class="bg-orange-100 text-orange-700 p-4 rounded-md max-w-full sm:max-w-lg md:max-w-md mx-auto"><%= alert %></p>
-        <% end %>
-      </div>
-      <div class="container mx-auto mt-6 text-gray-700">
-        <%= yield %>
-      </div>
+    <div class="container mx-auto mt-4 text-center px-4 sm:px-6 lg:px-8">
+      <% if notice %>
+        <p class="bg-green-100 text-green-700 p-4 rounded-md max-w-full sm:max-w-lg md:max-w-md mx-auto"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="bg-orange-100 text-orange-700 p-4 rounded-md max-w-full sm:max-w-lg md:max-w-md mx-auto"><%= alert %></p>
+      <% end %>
+    </div>
+    <div class="container mx-auto mt-6 text-gray-700">
+      <%= yield %>
+    </div>
   </body>
 </html>
