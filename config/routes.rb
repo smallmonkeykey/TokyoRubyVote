@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   delete '/logout' => 'sessions#destroy'
 
+  get '/terms', to: 'pages#terms'
+  get '/privacy', to: 'pages#privacy'
+
   resources :events, only: [:show] do
     get 'votes/categories', to: 'votes#categories'
     get 'votes/completions', to: 'votes#completions'
